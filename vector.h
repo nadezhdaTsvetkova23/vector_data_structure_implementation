@@ -23,7 +23,6 @@ public:
 	using const_iterator = Vector::ConstIterator;
 
 private:
-	//I n s t a n z v a r i a b l e n
 	//static constexpr value_type allocation_factor = 1.61;
 	static constexpr std::size_t start_size = 5;
 
@@ -33,7 +32,7 @@ private:
 	static constexpr size_t min_sz{ 5 };
 
 public:
-	//Methoden
+	//Methods
 	Vector() : sz{ 0 }, max_sz{ min_sz }, values{ new value_type[max_sz] }{
 	}
 
@@ -160,10 +159,9 @@ public:
 		using difference_type = Vector::difference_type;
 		using iterator_category = std::forward_iterator_tag;
 	private:
-		//I n s t a n z v a r i a b l e n
 		pointer ptr;
 	public:
-		//Methoden
+		//Methods
 		operator const_iterator() const {
 			return const_iterator{ ptr };
 		}
@@ -201,10 +199,9 @@ public:
 		using difference_type = Vector::difference_type;
 		using iterator_category = std::forward_iterator_tag;
 	private:
-		//I n s t a n z v a r i a b l e n
 		pointer ptr;
 	public:
-		//Methoden
+		//Methods
 		ConstIterator(pointer ptr = nullptr) : ptr{ ptr } {
 		}
 
