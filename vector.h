@@ -243,7 +243,7 @@ public:
 			throw std::runtime_error("Iterator out of bounds");
 		size_type current{ static_cast<size_type>(diff) };
 		if (sz >= max_sz)
-			reserve(max_sz * 2);////Achtung S o n d e r f all , wenn k ei n e Mi n d e s t g r o e s z e d e f i n i e r t i s t
+			reserve(max_sz * 2);
 		for (size_type i{ sz }; i-- > current;)
 			values[i + 1] = values[i];
 		values[current] = val;
